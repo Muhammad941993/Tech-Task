@@ -8,10 +8,16 @@ public class Shopper : MonoBehaviour
     Shop activeShop;
 
     public event Action OnActiveShopChange;
+
+  
     public void SetActiveShop(Shop shop)
     {
+
+        activeShop?.SetActiveShooper(null);
         this.activeShop = shop;
-        OnActiveShopChange.Invoke();
+        activeShop?.SetActiveShooper(this);
+
+        OnActiveShopChange?.Invoke();
     }
 
     public Shop GetActiveShop() => activeShop;

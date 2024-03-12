@@ -33,7 +33,6 @@ public class UI_Inventory : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-        print(inventory.GetItemList().Count);
         for (int i = 0,x = inventory.GetItemList().Count; i < x; i++)
         {
             Instantiate(itemSlotTemp, itemSlotContainer).gameObject.SetActive(true);
