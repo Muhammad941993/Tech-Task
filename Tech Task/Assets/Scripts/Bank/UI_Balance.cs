@@ -7,16 +7,11 @@ public class UI_Balance : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI balanceText;
     Player player;
-    private void Awake()
-    {
-        
-    }
-    // Start is called before the first frame update
+  
     void Start()
     {
         player = FindObjectOfType<Player>();
         player.OnBalanceChange += UpdateBalance;
-
     }
 
     private void OnDestroy()

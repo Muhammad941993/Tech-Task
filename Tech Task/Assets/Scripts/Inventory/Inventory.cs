@@ -22,9 +22,7 @@ public class Inventory
     {
         itemList.Remove(item);
         OnItemListUpdated();
-
     }
 
-  
     public List<InventoryItem> GetItemList() => itemList;
 }

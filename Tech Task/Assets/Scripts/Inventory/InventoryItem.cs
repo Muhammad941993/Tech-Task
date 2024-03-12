@@ -11,5 +11,5 @@ public class InventoryItem
 [System.Serializable]
 public enum ItemType
 {
-    ItemOne, ItemTwo, ItemThree, ItemFour, ItemFive,
+    none, food, drink, sword, shild,
 }

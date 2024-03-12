@@ -1117,20 +1117,25 @@ MonoBehaviour:
   ShopName: Ahmed Shop
   shopItems:
   - item:
-      Type: 0
-      Name: mo
-      Price: 10000
-      sprite: {fileID: 0}
+      Type: 3
+      Name: killer
+      Price: 800
+      sprite: {fileID: 21300000, guid: aab3f8c6ea3001041ab729d2c96f3326, type: 3}
   - item:
-      Type: 0
-      Name: mop
+      Type: 3
+      Name: Double Sword
+      Price: 1500
+      sprite: {fileID: 21300000, guid: 23a9b97f8e6c5a1429e455650059e6d5, type: 3}
+  - item:
+      Type: 4
+      Name: Wooden Shield
       Price: 1000
-      sprite: {fileID: 0}
+      sprite: {fileID: 21300000, guid: c8d461a92d7db794ca4745608d80c514, type: 3}
   - item:
-      Type: 0
-      Name: mopll
-      Price: 400
-      sprite: {fileID: 0}
+      Type: 4
+      Name: Golden Shield
+      Price: 2000
+      sprite: {fileID: 21300000, guid: ec90f4c399407cb4e88b90bdd15165d2, type: 3}
 --- !u!4 &656881597
 Transform:
   m_ObjectHideFlags: 0
@@ -2564,20 +2569,20 @@ MonoBehaviour:
   ShopName: Muhammad Shop
   shopItems:
   - item:
-      Type: 0
-      Name: mo
-      Price: 10000
-      sprite: {fileID: 0}
+      Type: 2
+      Name: lemon
+      Price: 200
+      sprite: {fileID: 21300000, guid: 7274f12505f80f341a0fcc415f15f008, type: 3}
   - item:
-      Type: 0
-      Name: mop
-      Price: 1000
-      sprite: {fileID: 0}
+      Type: 1
+      Name: burger
+      Price: 600
+      sprite: {fileID: 21300000, guid: 1ac14b55a5851d4458210238e22a4a8f, type: 3}
   - item:
-      Type: 0
-      Name: mopll
-      Price: 400
-      sprite: {fileID: 0}
+      Type: 1
+      Name: fruits
+      Price: 600
+      sprite: {fileID: 21300000, guid: 5756bb7735601da42afbc2cbb656f986, type: 3}
 --- !u!4 &1192228158
 Transform:
   m_ObjectHideFlags: 0
@@ -4636,7 +4641,7 @@ MonoBehaviour:
     m_Top: 50
     m_Bottom: 50
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 15
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

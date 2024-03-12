@@ -7,18 +7,12 @@ public class UI_Inventory : MonoBehaviour
     private Inventory inventory;
     Transform itemSlotContainer;
     Transform itemSlotTemp;
-
-    
     private void Start()
     {
         itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlotTemp = itemSlotContainer.Find("itemSlotTemp");
-
         inventory.OnItemListUpdated += RefreshInventoryItems;
-
     }
-
-
     public void SetInventory(Inventory inventory)
     {
         this.inventory = inventory;
@@ -29,15 +23,15 @@ public class UI_Inventory : MonoBehaviour
         foreach (Transform item in itemSlotContainer)
         {
             if(item == itemSlotTemp) continue;
-
             Destroy(item.gameObject);
         }
 
-        for (int i = 0,x = inventory.GetItemList().Count; i < x; i++)
+        foreach (var item in inventory.GetItemList())
         {
-            Instantiate(itemSlotTemp, itemSlotContainer).gameObject.SetActive(true);
+            var newitem = Instantiate(itemSlotTemp, itemSlotContainer);
+            newitem.gameObject.SetActive(true);
+            newitem.gameObject.GetComponent<UI_InventoryItem>().SetUp(item);
         }
-       
     }
 
     private void OnDestroy()
