@@ -5,11 +5,11 @@ public class InventoryItem
     public ItemType Type;
     public string Name;
     public float Price;
-    public Sprite sprite;
+    public Sprite Sprite;
 }
 
 [System.Serializable]
 public enum ItemType
 {
-    none, food, drink, sword, shild,
+    None, Food, Drink, Sword, Shild,
 }

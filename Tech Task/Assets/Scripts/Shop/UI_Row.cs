@@ -23,9 +23,9 @@ public class UI_Row : MonoBehaviour
     {
         this.shop = shop;
         this.shopItem = shopItem;
-        itemImage.sprite = shopItem.item.sprite;
-        itemName.text = shopItem.item.Name;
-        itemPrice.text = shopItem.item.Price.ToString();
+        itemImage.sprite = shopItem.Item.Sprite;
+        itemName.text = shopItem.Item.Name;
+        itemPrice.text = shopItem.Item.Price.ToString();
 
         var ButtonText = buyButton.GetComponentInChildren<TextMeshProUGUI>();
 

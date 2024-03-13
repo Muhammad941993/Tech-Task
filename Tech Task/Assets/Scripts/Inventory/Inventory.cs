@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Inventory 
 {
+    public event Action OnItemListUpdated;
+
     private List<InventoryItem> itemList;
 
-    public event Action OnItemListUpdated;
     public Inventory() 
     {
         itemList = new List<InventoryItem>();

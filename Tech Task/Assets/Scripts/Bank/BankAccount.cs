@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class BankAccount : MonoBehaviour
 {
-    float Balance = 3000;
     public event Action OnBalanceChange;
+
+    float balance = 3000;
     Player player;
 
     private void Start()
@@ -24,24 +25,24 @@ public class BankAccount : MonoBehaviour
         if (player.GetCurrentCoins() < coins) return;
 
         player.RemoveCoins(coins);
-        Balance += coins;
+        balance += coins;
         OnBalanceChange.Invoke();
     }
     public void WithdrawToAccount(float coins)
     {
         if (coins <= 0) return;
-        if (coins > Balance) return;
+        if (coins > balance) return;
         player.AddCoins(coins);
-        Balance -= coins;
+        balance -= coins;
         OnBalanceChange.Invoke();
     }
     public void IncreaseAccountBalanceByPercentage(float Percent)
     {
         float per = (Percent / 100);
-        Balance += Balance * per;
+        balance += balance * per;
        
         OnBalanceChange?.Invoke();
         
     }
-    public float GetCurrentBalance() => Balance;
+    public float GetCurrentBalance() => balance;
 }

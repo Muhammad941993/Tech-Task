@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] string ShopName;
     public event Action OnChange;
-    Shopper activeShopper;
+
+    [SerializeField] string shopName;
     [SerializeField] List<ShopItem> shopItems;
+
+    Shopper activeShopper;
 
     public List<ShopItem> GetShopItems()
     {
@@ -23,7 +25,7 @@ public class Shop : MonoBehaviour
     public bool IsBuyingMode() { return isBuyingMode; }
     public string GetShopName()
     {
-        return ShopName;
+        return shopName;
     }
     public void SetActiveShooper(Shopper shopper)
     {
@@ -43,17 +45,17 @@ public class Shop : MonoBehaviour
     {
         var player = activeShopper.GetComponent<Player>();
         var inventory = player.GetInventory();
-        if (player.GetCurrentCoins() < item.item.Price) return;
-        player.RemoveCoins(item.item.Price);
-        inventory.AddItem(item.item);
+        if (player.GetCurrentCoins() < item.Item.Price) return;
+        player.RemoveCoins(item.Item.Price);
+        inventory.AddItem(item.Item);
         RemoveShopItem(item);
     }
     public void CompleteSellAction(ShopItem item)
     {
         var player = activeShopper.GetComponent<Player>();
         var inventory = player.GetInventory();
-        player.AddCoins(item.item.Price);
-        inventory.RemoveItem(item.item);
-        AddShopItem(item.item);
+        player.AddCoins(item.Item.Price);
+        inventory.RemoveItem(item.Item);
+        AddShopItem(item.Item);
     }
 }

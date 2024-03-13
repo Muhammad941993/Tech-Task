@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class Shopper : MonoBehaviour
 {
-    Shop activeShop;
-
     public event Action OnActiveShopChange;
 
-  
+    Shop activeShop;
+
     public void SetActiveShop(Shop shop)
     {
 

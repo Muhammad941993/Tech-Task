@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] UI_Inventory _Inventory;
-    [SerializeField] float Coins =0;
+    [SerializeField] UI_Inventory ui_Inventory;
+
+    float coins = 0;
     Inventory inventory;
 
     public event Action OnBalanceChange;
@@ -14,7 +13,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         inventory = new Inventory();
-        _Inventory.SetInventory(inventory);
+        ui_Inventory.SetInventory(inventory);
     }
     private void Start()
     {
@@ -22,20 +21,20 @@ public class Player : MonoBehaviour
     }
     public Inventory GetInventory() => inventory;
 
-    public float GetCurrentCoins() => Coins;
+    public float GetCurrentCoins() => coins;
 
-   
+
     public void AddCoins(float coins)
     {
         if (coins <= 0) return;
-        Coins += coins;
+        this.coins += coins;
         OnBalanceChange.Invoke();
     }
     public void RemoveCoins(float coins)
     {
         if (coins <= 0) return;
-        if (coins > Coins) return;
-        Coins -= coins;
+        if (coins > this.coins) return;
+        this.coins -= coins;
         OnBalanceChange.Invoke();
     }
 }

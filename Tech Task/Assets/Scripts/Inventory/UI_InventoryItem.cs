@@ -7,6 +7,6 @@ public class UI_InventoryItem : MonoBehaviour
 
     public void SetUp(InventoryItem item)
     {
-        itemIcon.sprite = item.sprite;
+        itemIcon.sprite = item.Sprite;
     }
 }

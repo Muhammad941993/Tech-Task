@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UI_Controller : MonoBehaviour
 {
-    [SerializeField] List<Transform> UIWindows;
+    [SerializeField] List<Transform> uIWindows;
 
     private void Start()
     {
@@ -13,7 +13,7 @@ public class UI_Controller : MonoBehaviour
     }
     public void DisableAllUI()
     {
-        foreach (var item in UIWindows)
+        foreach (var item in uIWindows)
         {
             item.gameObject.SetActive(false);
         }

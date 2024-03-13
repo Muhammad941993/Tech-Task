@@ -5,7 +5,7 @@ using TMPro;
 
 public class UI_Bank : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI AccountBalance;
+    [SerializeField] TextMeshProUGUI accountBalance;
     BankAccount bankAccount;
     private void Awake()
     {
@@ -27,6 +27,6 @@ public class UI_Bank : MonoBehaviour
 
     void UpdateAccountBalance()
     {
-        AccountBalance.text = $"$ {bankAccount.GetCurrentBalance()}";
+        accountBalance.text = $"$ {bankAccount.GetCurrentBalance()}";
     }
 }

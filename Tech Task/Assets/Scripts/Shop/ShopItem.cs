@@ -1,11 +1,11 @@
 [System.Serializable]
 public class ShopItem 
 {
-    public InventoryItem item;
+    public InventoryItem Item;
    
     public ShopItem(InventoryItem item)
     {
-        this.item = item;
+        this.Item = item;
        
     }
 }

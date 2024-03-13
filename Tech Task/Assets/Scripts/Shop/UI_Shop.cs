@@ -9,6 +9,7 @@ public class UI_Shop : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI ShopName;
     [SerializeField] Button switchButton;
+
     Transform itemSlotContainer;
     Transform itemSlotTemp;
 
